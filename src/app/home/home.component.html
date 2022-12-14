@@ -1,0 +1,30 @@
+<div class="box">
+  <div class="box-inner">
+    <h2 class="container text-success">Chat</h2>
+
+    <table class="table table-striped container">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Process</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user["id"] }}</td>
+          <td>{{ user["name"] | titlecase }}</td>
+          <td>
+            <button
+              type="button"
+              (click)="onSelect(user)"
+              class="btn btn-success"
+            >
+              Chat
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

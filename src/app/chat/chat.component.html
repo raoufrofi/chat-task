@@ -1,0 +1,28 @@
+<div class="chat-box">
+  <header class="bg-success">
+    <span routerLink="" class="material-symbols-outlined pointer"> west </span>
+    <p class="m-0">{{ userData[0].name | titlecase }}</p>
+  </header>
+  <div class="body bg-light">
+    <div class="message-body">
+      <ul>
+        <!-- <li *ngFor="let message of messages">{{ message }}</li> -->
+        <li *ngFor="let message of messages">{{ message }}</li>
+      </ul>
+    </div>
+    <form #messageForm="ngForm" (ngSubmit)="submitMessage(messageForm)">
+      <div class="input d-flex justify-between">
+        <input
+          type="text"
+          ngModel
+          name="message"
+          class="px-3 py-1"
+          placeholder="Type message"
+        />
+        <button class="btn btn-success" type="submit">
+          <span class="material-symbols-outlined"> send </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

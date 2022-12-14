@@ -1,0 +1,12 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &-inner {
+    display: grid;
+    gap: 2em;
+    width: 700px;
+  }
+}
